@@ -55,5 +55,51 @@ root.left.left=TreeNode(5)
 root.left.right=TreeNode(1)
 res=sum_root_to_leaf(root)
 print(res)
+----------------------------------------------------------------------
+from collections import deque
+class TreeNode:
+    def __init__(self, val=0,left=None,right=None):
+        self.val=int(val)
+        self.left=left
+        self.right=right
+        
+def build_tree(values):
+    if not values or values[0] == "null":
+        return None
+
+    root = TreeNode(values[0])
+    queue = deque([root])
+    i = 1
+
+    while queue and i < len(values):
+        node = queue.popleft()
+        if i < len(values) and values[i] != "null":
+            node.left = TreeNode(values[i])
+            queue.append(node.left)
+        i += 1
+        if i < len(values) and values[i] != "null":
+            node.right = TreeNode(values[i])
+            queue.append(node.right)
+        i += 1
+
+    return root
+
+    
+def sum_root_to_leaf(root):
+    def dfs(node, curr_num):
+        if not node:
+            return 0
+        curr_num=(curr_num*10)+node.val
+        if not node.left and not node.right:
+            return curr_num
+        return dfs(node.left,curr_num)+dfs(node.right,curr_num)
+    return dfs(root,0)
+
+input_values=input("Enter space separated Tree values: ")
+values=input_values.strip().split()
+root=build_tree(values)
+res=sum_root_to_leaf(root)
+print(res)
+
 
 
