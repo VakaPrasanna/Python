@@ -23,17 +23,26 @@ Input: nums = [0,0,0]
 Output: [[0,0,0]]
 Explanation: The only possible triplet sums up to 0.
 -----------------------------------------------------------------------
-def three_sum(nums):
-    res=[]
-    nums.sort()
-    for i in range(len(nums)):
-        for j in range(i+1,len(nums)):
-            for k in range(j+1,len(nums)):
-                if nums[i]+nums[j]+nums[k]==0:
-                    triplet=[nums[i], nums[j], nums[k]]
-                    if triplet not in res:
-                        res.append(triplet)
-    return res
+class Solution:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        res=set()
+        nums.sort()
+        
+        for i in range(len(nums)-2):
+            l=i+1
+            r=len(nums)-1
+            while l<r:
+                sum=nums[i]+nums[l]+nums[r]
+                if sum==0:
+                    res. add(tuple([nums[i],nums[l],nums[r]]))
+                    r-=1
+                    l+=1
+                elif sum<0:
+                    l+=1
+                else:
+                    r-=1
+        return list(res)   
+        
                         
 nums=list(map(int, input("Enter numbers: ").split()))
 print(three_sum(nums))
