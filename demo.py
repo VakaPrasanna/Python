@@ -12,3 +12,18 @@ def fun(nums,target):
 nums = [2, 2,2, 2, 2]
 target = 8
 print(fun(nums,target))
+----------------------------------
+121:
+# cook your dish here
+input=[7,1,5,3,6,4]
+min_val=float('inf')
+ind=0
+for i in range(len(input)):
+    if input[i]<min_val:
+        min_val=input[i]
+        ind=i
+
+l=input[ind:]
+l.sort()
+print(l[-1]-l[0])
+------------------------------------------
