@@ -26,3 +26,17 @@ for i in (input):
 
 print(sum)
 ------------------------------------------
+198:
+Input= [1,2,3,1]
+sum1,sum2=0,0
+for i in range(0,len(Input)):
+    if i%2==0:
+        sum1+=Input[i]
+    else:
+        sum2+=Input[i]
+
+if sum1>=sum2:
+    print(sum1)
+else:
+    print(sum2)
+-----------------------------------------------
