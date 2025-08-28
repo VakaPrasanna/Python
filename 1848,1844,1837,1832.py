@@ -32,3 +32,13 @@ while n:
     sum+=rem
     n//=k 
 print(sum)
+
+---------------------------------
+
+def isPangram(sentence):
+    if len(set(sentence)) == 26:
+        return True
+    else:
+        return False
+sentence = "thequickbrownfoxjumpsoverthelazydog"
+print(isPangram(sentence))
