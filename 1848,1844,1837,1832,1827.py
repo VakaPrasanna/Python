@@ -42,3 +42,18 @@ def isPangram(sentence):
         return False
 sentence = "thequickbrownfoxjumpsoverthelazydog"
 print(isPangram(sentence))
+-----------------------------------------
+nums = [1,5,2,4,1]
+def fun(nums):
+    cnt=0
+    if len(nums)==1:
+        return 0
+    else:
+        for i in range(len(nums)-1):
+            if nums[i]<nums[i+1]:
+                continue
+            else:
+                cnt+= nums[i]-nums[i+1]+1
+                nums[i+1]=nums[i]+1
+    return cnt
+print(fun(nums))
