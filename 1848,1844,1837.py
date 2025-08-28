@@ -23,4 +23,12 @@ for i,x in enumerate(s):
         res+=x
         
 print(res)
-
+-------------------------
+n = 34
+k = 6
+sum=0
+while n:
+    rem=n%k 
+    sum+=rem
+    n//=k 
+print(sum)
