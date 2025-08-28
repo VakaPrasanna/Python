@@ -57,3 +57,15 @@ def fun(nums):
                 nums[i+1]=nums[i]+1
     return cnt
 print(fun(nums))
+------------
+nums =  [-1,1,-1,1,-1]
+def fun(nums):
+    res=1 
+    for v in nums:
+        if v == 0:
+            return 0
+        if v < 0:
+            res *= -1
+    return res
+print(fun(nums))
+    
