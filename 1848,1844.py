@@ -9,3 +9,18 @@ for i in range(start,len(nums)):
 print(min_diff)
 
 #return min(abs(i - start) for i, x in enumerate(nums) if x == target)
+
+-----------------
+
+s = "a1b2c3d4e"
+#Output: "abbdcfdhe"
+res=""
+for i,x in enumerate(s):
+    if x.isdigit():
+        r=chr(ord(s[i-1])+int(x))
+        res+=r
+    else:
+        res+=x
+        
+print(res)
+
