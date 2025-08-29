@@ -178,6 +178,86 @@ is food_indx=0 < 2: yes
 
 return "score=1"
 -----------------------------------------------------
+Now:
+head(1,2), tail(1,1)
+Snake= deque( [(1,2), (1,1)] ) -> head, tail
+body= { (1,2), (1,1) }
+food=[ [0,1] ], score=1
+food_indx=1
+
+
+Move 'U':
+
+head(0,2)-> moved Up
+
+#Wall collision Check:
+is 0<=0<2 and 0<=2<3-> True, No wall collision
+
+new_head=(0,2)
+tail=(1,1)
+
+#Snake body Collision Check:
+new_head(0,2) -> is in body= {(1,2),(1,1)}= false, no body collision
+
+Snake= deque( [(0,2),(1,2),(1,1)] ) -> head, tail
+body= { (1,2), (1,1) ,(0,2)}
+
+is food_indx=1 < 2: yes
+     is food[1]->[0,1]== [0,2]: no food, so remove tail
+             removed=snake(1,1)
+             Snake=([(0,2),(1,2)])
+             body= {(0,2),(1,2)}
+
+return "score=1"
+-------------------------------------------------------
+Now:
+head(0,2), tail(1,2)
+Snake= deque( [(0,2), (1,2)] ) -> head, tail
+body= { (0,2), (1,2) }
+food=[ [0,1] ], score=1
+food_indx=1
+
+
+Move 'L':
+
+head(0,1)-> moved  Left
+
+#Wall collision Check:
+is 0<=0<2 and 0<=1<3-> True, No wall collision
+
+new_head=(0,1)
+tail=(1,2)
+
+#Snake body Collision Check:
+new_head(0,1) -> is in body= {(0,2),(1,2)}= false, no body collision
+
+Snake= deque( [(0,1),(0,2),(1,2)] ) -> head, tail
+body= { (0,1),(0,2),(1,2)}
+
+is food_indx=1 < 2: yes
+     is food[1]->[0,1]== [0,1]: yes food, so update score
+             score=2
+             food_indx=2->no more food
+
+return "score=2"
+-------------------------------------------------------
+Now:
+
+head(0,1), tail(1,2)
+Snake= deque( [(0,1),(0,2),(1,2)] ) -> head, tail
+body= { (0,1),(0,2),(1,2) }
+food=[], score=2
+food_indx=2
+
+
+Move 'U':
+
+head(-1,1)-> moved Up
+
+#Wall collision Check:
+is 0<=-1<2 ->false (Game Over)
+
+return "-1"
 
 
                          
