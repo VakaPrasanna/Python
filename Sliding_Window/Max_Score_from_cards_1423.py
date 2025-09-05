@@ -27,6 +27,7 @@ Constraints:
 1 <= cardPoints[i] <= 104
 1 <= k <= cardPoints.length
 -----------------------------------------------------------------------------------------------------
+bestUsecase: k<<n
 cardPoints = [1,2,3,4,5,6,1]
 n=len(cardPoints)
 k = 3
@@ -44,5 +45,22 @@ print(score)
 TC: O(K)
 SC: O(1)
 ---------------------------------------------------------------------------------------------------------
+BestUsecase: n>k and n~k (also when k is large)
+
+cardPoints = [9,7,7,9,7,7,9]
+k = 7
+
+n=len(cardPoints)
+win_size=n-k
+score=sum(cardPoints)
+
+win_sum=sum(cardPoints[:win_size])
+min_win_sum=win_sum
+
+for i in range(win_size,n):
+    win_sum+=cardPoints[i]-cardPoints[i-win_size]
+    min_win_sum=min(min_win_sum,win_sum)
+print(score-min_win_sum)
+    
 
 
