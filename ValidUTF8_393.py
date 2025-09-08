@@ -36,27 +36,31 @@ But the second continuation byte does not start with 10, so it is invalid.
  
 --------------------------------------------------------------------------------------
 def validUtf8(data):
-    n = 0
+    cnt = 0
     for v in data:
-        if n > 0:
+        if cnt > 0:
             if v >> 6 != 0b10:
                 return False
-            n -= 1
+            cnt -= 1
         elif v >> 7 == 0:
-            n = 0
+            cnt = 0
         elif v >> 5 == 0b110:
-            n = 1
+            cnt = 1
         elif v >> 4 == 0b1110:
-            n = 2
+            cnt = 2
         elif v >> 3 == 0b11110:
-            n = 3
+            cnt = 3
         else:
             return False
-    return n == 0
-data = [235,140,4]
-print(validUtf8(data))
-data2=[197,130,1]
+    return cnt == 0
+
+data1=[197,130,1]
+print(validUtf8(data1))
+data2 = [235,140,4]
 print(validUtf8(data2))
+data3=[240,162,138,147]
+print(validUtf8(data3))
 -------------------------------------------------------------------------------
+True
 False
 True
