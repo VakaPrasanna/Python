@@ -1,0 +1,465 @@
+{
+  "set-java-maven": {
+    "data": {
+      "Job URL": "https://gh.asml.com/repos/asml-gh/lc09-obi-actions-common/actions/runs/1210665",
+      "Start Time": "2025-09-19T05:17:23.357728Z",
+      "End Time": "2025-09-19T05:18:47.357728Z",
+      "Duration": "84s",
+      "Status": "success"
+    },
+    "stderr": {
+      "file": "logs/set-java-maven.txt",
+      "errors": []
+    },
+    "stdout": {
+      "step1": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: actions/checkout@v4"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:20:56.357Z uses: actions/checkout@v4",
+          "2025-09-19T05:20:56.407Z shell: /usr/bin/bash -e {0}"
+        ]
+      },
+      "runsetjavamaven": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: ./.github/actions/set-java-maven"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:17:52.357Z uses: ./.github/actions/set-java-maven",
+          "2025-09-19T05:17:52.407Z shell: /usr/bin/bash -e {0}"
+        ]
+      }
+    }
+  },
+  "build-unit-test": {
+    "data": {
+      "Job URL": "https://gh.asml.com/repos/asml-gh/lc09-obi-actions-common/actions/runs/5498301",
+      "Start Time": "2025-09-19T05:20:23.357728Z",
+      "End Time": "2025-09-19T05:23:31.357728Z",
+      "Duration": "188s",
+      "Status": "success"
+    },
+    "stderr": {
+      "file": "logs/build-unit-test.txt",
+      "errors": []
+    },
+    "stdout": {
+      "step1": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: actions/checkout@v4"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:17:51.357Z uses: actions/checkout@v4",
+          "2025-09-19T05:17:51.407Z shell: /usr/bin/bash -e {0}"
+        ]
+      },
+      "runbuildunittest": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: ./.github/actions/build-unit-test"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:19:54.357Z uses: ./.github/actions/build-unit-test",
+          "2025-09-19T05:19:54.407Z shell: /usr/bin/bash -e {0}",
+          "2025-09-19T05:19:54.457Z uses: logic"
+        ]
+      }
+    }
+  },
+  "quality-gate": {
+    "data": {
+      "Job URL": "https://gh.asml.com/repos/asml-gh/lc09-obi-actions-common/actions/runs/9946857",
+      "Start Time": "2025-09-19T05:23:23.357728Z",
+      "End Time": "2025-09-19T05:25:23.357728Z",
+      "Duration": "120s",
+      "Status": "failure"
+    },
+    "stderr": {
+      "file": "logs/quality-gate.txt",
+      "errors": [
+        "2025-09-19T05:25:13.357728Z ##[error]Process completed with exit code 1."
+      ]
+    },
+    "stdout": {
+      "step1": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: actions/checkout@v4"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:19:36.357Z uses: actions/checkout@v4",
+          "2025-09-19T05:19:36.407Z shell: /usr/bin/bash -e {0}"
+        ]
+      },
+      "runqualitygate": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: ./.github/actions/quality-gate"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:18:15.357Z uses: ./.github/actions/quality-gate",
+          "2025-09-19T05:18:15.407Z shell: /usr/bin/bash -e {0}"
+        ]
+      }
+    }
+  },
+  "security-scans": {
+    "data": {
+      "Job URL": "https://gh.asml.com/repos/asml-gh/lc09-obi-actions-common/actions/runs/8804839",
+      "Start Time": "2025-09-19T05:26:23.357728Z",
+      "End Time": "2025-09-19T05:30:28.357728Z",
+      "Duration": "245s",
+      "Status": "failure"
+    },
+    "stderr": {
+      "file": "logs/security-scans.txt",
+      "errors": [
+        "2025-09-19T05:30:18.357728Z ##[error]Process completed with exit code 1."
+      ]
+    },
+    "stdout": {
+      "step1": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: actions/checkout@v4"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:18:24.357Z uses: actions/checkout@v4",
+          "2025-09-19T05:18:24.407Z shell: /usr/bin/bash -e {0}"
+        ]
+      },
+      "runsecurityscans": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: ./.github/actions/security-scans"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:18:16.357Z uses: ./.github/actions/security-scans",
+          "2025-09-19T05:18:16.407Z shell: /usr/bin/bash -e {0}"
+        ]
+      }
+    }
+  },
+  "build-push-docker-image": {
+    "data": {
+      "Job URL": "https://gh.asml.com/repos/asml-gh/lc09-obi-actions-common/actions/runs/4956894",
+      "Start Time": "2025-09-19T05:19:23.357728Z",
+      "End Time": "2025-09-19T05:23:54.357728Z",
+      "Duration": "271s",
+      "Status": "success"
+    },
+    "stderr": {
+      "file": "logs/build-push-docker-image.txt",
+      "errors": []
+    },
+    "stdout": {
+      "step1": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: actions/checkout@v4"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:18:51.357Z uses: actions/checkout@v4",
+          "2025-09-19T05:18:51.407Z shell: /usr/bin/bash -e {0}"
+        ]
+      },
+      "runbuildpushdockerimage": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: ./.github/actions/build-push-docker-image"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:18:33.357Z uses: ./.github/actions/build-push-docker-image",
+          "2025-09-19T05:18:33.407Z shell: /usr/bin/bash -e {0}",
+          "2025-09-19T05:18:33.457Z uses: logic"
+        ]
+      }
+    }
+  },
+  "manual-approval-for-deploy": {
+    "data": {
+      "Job URL": "https://gh.asml.com/repos/asml-gh/lc09-obi-actions-common/actions/runs/1431006",
+      "Start Time": "2025-09-19T05:25:23.357728Z",
+      "End Time": "2025-09-19T05:28:03.357728Z",
+      "Duration": "160s",
+      "Status": "success"
+    },
+    "stderr": {
+      "file": "logs/manual-approval-for-deploy.txt",
+      "errors": []
+    },
+    "stdout": {
+      "step1": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: actions/checkout@v4"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:18:19.357Z uses: actions/checkout@v4",
+          "2025-09-19T05:18:19.407Z shell: /usr/bin/bash -e {0}"
+        ]
+      },
+      "runmanualapprovalfordeploy": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: ./.github/actions/manual-approval-for-deploy"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:21:49.357Z uses: ./.github/actions/manual-approval-for-deploy",
+          "2025-09-19T05:21:49.407Z shell: /usr/bin/bash -e {0}",
+          "2025-09-19T05:21:49.457Z uses: logic"
+        ]
+      }
+    }
+  },
+  "deploy-to-kubernetes": {
+    "data": {
+      "Job URL": "https://gh.asml.com/repos/asml-gh/lc09-obi-actions-common/actions/runs/2004718",
+      "Start Time": "2025-09-19T05:24:23.357728Z",
+      "End Time": "2025-09-19T05:29:16.357728Z",
+      "Duration": "293s",
+      "Status": "failure"
+    },
+    "stderr": {
+      "file": "logs/deploy-to-kubernetes.txt",
+      "errors": [
+        "2025-09-19T05:29:06.357728Z ##[error]Process completed with exit code 1."
+      ]
+    },
+    "stdout": {
+      "step1": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: actions/checkout@v4"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:19:44.357Z uses: actions/checkout@v4",
+          "2025-09-19T05:19:44.407Z shell: /usr/bin/bash -e {0}"
+        ]
+      },
+      "rundeploytokubernetes": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: ./.github/actions/deploy-to-kubernetes"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:17:42.357Z uses: ./.github/actions/deploy-to-kubernetes",
+          "2025-09-19T05:17:42.407Z shell: /usr/bin/bash -e {0}",
+          "2025-09-19T05:17:42.457Z uses: logic"
+        ]
+      }
+    }
+  },
+  "smoke-test": {
+    "data": {
+      "Job URL": "https://gh.asml.com/repos/asml-gh/lc09-obi-actions-common/actions/runs/6990352",
+      "Start Time": "2025-09-19T05:24:23.357728Z",
+      "End Time": "2025-09-19T05:28:15.357728Z",
+      "Duration": "232s",
+      "Status": "success"
+    },
+    "stderr": {
+      "file": "logs/smoke-test.txt",
+      "errors": []
+    },
+    "stdout": {
+      "step1": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: actions/checkout@v4"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:20:17.357Z uses: actions/checkout@v4",
+          "2025-09-19T05:20:17.407Z shell: /usr/bin/bash -e {0}"
+        ]
+      },
+      "runsmoketest": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: ./.github/actions/smoke-test"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:17:44.357Z uses: ./.github/actions/smoke-test",
+          "2025-09-19T05:17:44.407Z shell: /usr/bin/bash -e {0}",
+          "2025-09-19T05:17:44.457Z uses: logic"
+        ]
+      }
+    }
+  },
+  "pipeline-post": {
+    "data": {
+      "Job URL": "https://gh.asml.com/repos/asml-gh/lc09-obi-actions-common/actions/runs/4446636",
+      "Start Time": "2025-09-19T05:21:23.357728Z",
+      "End Time": "2025-09-19T05:25:03.357728Z",
+      "Duration": "220s",
+      "Status": "success"
+    },
+    "stderr": {
+      "file": "logs/pipeline-post.txt",
+      "errors": []
+    },
+    "stdout": {
+      "step1": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: actions/checkout@v4"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:18:45.357Z uses: actions/checkout@v4",
+          "2025-09-19T05:18:45.407Z shell: /usr/bin/bash -e {0}"
+        ]
+      },
+      "publishtestresults(always)": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: dorny/test-reporter@v1"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:22:10.357Z uses: dorny/test-reporter@v1",
+          "2025-09-19T05:22:10.407Z shell: /usr/bin/bash -e {0}",
+          "2025-09-19T05:22:10.457Z uses: logic"
+        ]
+      }
+    }
+  },
+  "generate-workflow-metrics": {
+    "data": {
+      "Job URL": "https://gh.asml.com/repos/asml-gh/lc09-obi-actions-common/actions/runs/5324444",
+      "Start Time": "2025-09-19T05:24:23.357728Z",
+      "End Time": "2025-09-19T05:28:52.357728Z",
+      "Duration": "269s",
+      "Status": "success"
+    },
+    "stderr": {
+      "file": "logs/generate-workflow-metrics.txt",
+      "errors": []
+    },
+    "stdout": {
+      "step1": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: actions/checkout@v4"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:19:40.357Z uses: actions/checkout@v4",
+          "2025-09-19T05:19:40.407Z shell: /usr/bin/bash -e {0}"
+        ]
+      },
+      "setuppython": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: actions/setup-python@v4"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:21:58.357Z uses: actions/setup-python@v4",
+          "2025-09-19T05:21:58.407Z shell: /usr/bin/bash -e {0}"
+        ]
+      },
+      "installpyyaml": {
+        "steps": [
+          {
+            "cmds": [
+              "pip install PyYAML"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:20:14.357Z pip install PyYAML",
+          "2025-09-19T05:20:14.407Z shell: /usr/bin/bash -e {0}"
+        ]
+      },
+      "generateworkflowmetrics": {
+        "steps": [
+          {
+            "cmds": [
+              "curl -o metrics.py https://raw.githubusercontent.com/VakaPrasanna/githubactions/main/metrics.py",
+              "python metrics.py"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:17:25.357Z curl -o metrics.py https://raw.githubusercontent.com/VakaPrasanna/githubactions/main/metrics.py",
+          "2025-09-19T05:17:25.407Z python metrics.py",
+          "2025-09-19T05:17:25.457Z shell: /usr/bin/bash -e {0}"
+        ]
+      },
+      "uploadmetrics": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: actions/upload-artifact@v4"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:21:17.357Z uses: actions/upload-artifact@v4",
+          "2025-09-19T05:21:17.407Z shell: /usr/bin/bash -e {0}"
+        ]
+      }
+    }
+  }
+}
