@@ -1,0 +1,326 @@
+{
+  "metadata": {
+    "Workflow URL": "https://gh.asml.com/repos/asml-gh/lc09-obi-actions-common/actions/runs/7890036",
+    "Start Time": "2025-09-19T05:35:44.854828Z",
+    "End Time": "2025-09-19T06:05:33.854828Z",
+    "Total Duration": "1789s",
+    "Overall Status": "success",
+    "Repository": "asml-gh/lc09-obi-actions-common"
+  },
+  "set-java-maven": {
+    "stderr": {
+      "file": "logs/set-java-maven.txt",
+      "errors": []
+    },
+    "stdout": {
+      "step1": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: actions/checkout@v4"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:40:22.854Z uses: actions/checkout@v4",
+          "2025-09-19T05:40:22.904Z shell: /usr/bin/bash -e {0}"
+        ]
+      },
+      "runsetjavamaven": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: ./.github/actions/set-java-maven"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:38:37.854Z uses: ./.github/actions/set-java-maven",
+          "2025-09-19T05:38:37.904Z shell: /usr/bin/bash -e {0}"
+        ]
+      }
+    }
+  },
+  "build-unit-test": {
+    "stderr": {
+      "file": "logs/build-unit-test.txt",
+      "errors": []
+    },
+    "stdout": {
+      "step1": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: actions/checkout@v4"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:35:55.854Z uses: actions/checkout@v4",
+          "2025-09-19T05:35:55.904Z shell: /usr/bin/bash -e {0}"
+        ]
+      },
+      "runbuildunittest": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: ./.github/actions/build-unit-test"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:40:40.854Z uses: ./.github/actions/build-unit-test",
+          "2025-09-19T05:40:40.904Z shell: /usr/bin/bash -e {0}",
+          "2025-09-19T05:40:40.954Z uses: logic"
+        ]
+      }
+    }
+  },
+  "quality-gate": {
+    "stderr": {
+      "file": "logs/quality-gate.txt",
+      "errors": []
+    },
+    "stdout": {
+      "step1": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: actions/checkout@v4"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:38:15.854Z uses: actions/checkout@v4",
+          "2025-09-19T05:38:15.904Z shell: /usr/bin/bash -e {0}"
+        ]
+      },
+      "runqualitygate": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: ./.github/actions/quality-gate"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:38:16.854Z uses: ./.github/actions/quality-gate",
+          "2025-09-19T05:38:16.904Z shell: /usr/bin/bash -e {0}"
+        ]
+      }
+    }
+  },
+  "security-scans": {
+    "stderr": {
+      "file": "logs/security-scans.txt",
+      "errors": []
+    },
+    "stdout": {
+      "step1": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: actions/checkout@v4"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:38:38.854Z uses: actions/checkout@v4",
+          "2025-09-19T05:38:38.904Z shell: /usr/bin/bash -e {0}"
+        ]
+      },
+      "runsecurityscans": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: ./.github/actions/security-scans"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:40:08.854Z uses: ./.github/actions/security-scans",
+          "2025-09-19T05:40:08.904Z shell: /usr/bin/bash -e {0}"
+        ]
+      }
+    }
+  },
+  "build-push-docker-image": {
+    "stderr": {
+      "file": "logs/build-push-docker-image.txt",
+      "errors": []
+    },
+    "stdout": {
+      "step1": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: actions/checkout@v4"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:36:46.854Z uses: actions/checkout@v4",
+          "2025-09-19T05:36:46.904Z shell: /usr/bin/bash -e {0}"
+        ]
+      },
+      "runbuildpushdockerimage": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: ./.github/actions/build-push-docker-image"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:35:47.854Z uses: ./.github/actions/build-push-docker-image",
+          "2025-09-19T05:35:47.904Z shell: /usr/bin/bash -e {0}",
+          "2025-09-19T05:35:47.954Z uses: logic"
+        ]
+      }
+    }
+  },
+  "manual-approval-for-deploy": {
+    "stderr": {
+      "file": "logs/manual-approval-for-deploy.txt",
+      "errors": [
+        "2025-09-19T05:36:16.854828Z ##[error]Process completed with exit code 1."
+      ]
+    },
+    "stdout": {
+      "step1": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: actions/checkout@v4"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:36:23.854Z uses: actions/checkout@v4",
+          "2025-09-19T05:36:23.904Z shell: /usr/bin/bash -e {0}"
+        ]
+      },
+      "runmanualapprovalfordeploy": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: ./.github/actions/manual-approval-for-deploy"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:37:39.854Z uses: ./.github/actions/manual-approval-for-deploy",
+          "2025-09-19T05:37:39.904Z shell: /usr/bin/bash -e {0}",
+          "2025-09-19T05:37:39.954Z uses: logic"
+        ]
+      }
+    }
+  },
+  "deploy-to-kubernetes": {
+    "stderr": {
+      "file": "logs/deploy-to-kubernetes.txt",
+      "errors": [
+        "2025-09-19T05:36:21.854828Z ##[error]Process completed with exit code 1."
+      ]
+    },
+    "stdout": {
+      "step1": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: actions/checkout@v4"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:36:23.854Z uses: actions/checkout@v4",
+          "2025-09-19T05:36:23.904Z shell: /usr/bin/bash -e {0}"
+        ]
+      },
+      "rundeploytokubernetes": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: ./.github/actions/deploy-to-kubernetes"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:40:08.854Z uses: ./.github/actions/deploy-to-kubernetes",
+          "2025-09-19T05:40:08.904Z shell: /usr/bin/bash -e {0}",
+          "2025-09-19T05:40:08.954Z uses: logic"
+        ]
+      }
+    }
+  },
+  "smoke-test": {
+    "stderr": {
+      "file": "logs/smoke-test.txt",
+      "errors": []
+    },
+    "stdout": {
+      "step1": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: actions/checkout@v4"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:38:44.854Z uses: actions/checkout@v4",
+          "2025-09-19T05:38:44.904Z shell: /usr/bin/bash -e {0}"
+        ]
+      },
+      "runsmoketest": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: ./.github/actions/smoke-test"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:38:29.854Z uses: ./.github/actions/smoke-test",
+          "2025-09-19T05:38:29.904Z shell: /usr/bin/bash -e {0}",
+          "2025-09-19T05:38:29.954Z uses: logic"
+        ]
+      }
+    }
+  },
+  "pipeline-post": {
+    "stderr": {
+      "file": "logs/pipeline-post.txt",
+      "errors": []
+    },
+    "stdout": {
+      "step1": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: actions/checkout@v4"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:39:52.854Z uses: actions/checkout@v4",
+          "2025-09-19T05:39:52.904Z shell: /usr/bin/bash -e {0}"
+        ]
+      },
+      "publishtestresultsalways": {
+        "steps": [
+          {
+            "cmds": [
+              "uses: dorny/test-reporter@v1"
+            ]
+          }
+        ],
+        "output": [
+          "2025-09-19T05:37:49.854Z uses: dorny/test-reporter@v1",
+          "2025-09-19T05:37:49.904Z shell: /usr/bin/bash -e {0}",
+          "2025-09-19T05:37:49.954Z uses: logic"
+        ]
+      }
+    }
+  }
+}
