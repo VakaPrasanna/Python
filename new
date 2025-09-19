@@ -1,0 +1,13 @@
+📊 Generated metrics for 12 jobs
+ - metadata
+ - checkout
+ - set-java-maven
+ - build-unit-test
+ - static-code-analysis-sonarqube
+ - quality-gate
+ - security-scans
+ - build-push-docker-image
+ - manual-approval-for-deploy
+ - deploy-to-kubernetes
+ - smoke-test
+ - pipeline-post
